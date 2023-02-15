@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'obase=$bestchol; $(((obase=$water;$WATER) + (obase=$stir;$STIR)))'
+echo $(($WATER + $STIR))
