@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# The classic FizzBuzz program from 1 to 100
 
 i=1
 while [ $i -le 100 ]

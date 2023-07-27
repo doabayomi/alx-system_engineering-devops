@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Printing time for 12 hours
 
 hours=0
 while [ $hours -lt 13 ]

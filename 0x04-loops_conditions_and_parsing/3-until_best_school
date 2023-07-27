@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Prints string 10 times using until loop
 
 a=0
 until [ $a -gt 10 ]

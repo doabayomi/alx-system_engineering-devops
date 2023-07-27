@@ -9,4 +9,8 @@ a=0
 while [ $a -gt 10 ]
 #not while [$a -gt 10]
 ```
-
+* In for loops, there are three ways to increment and to make sure you are not flagged by the `shellcheck` module, use the `_` as variable
+```sh
+for _ in {1..10}
+for _ in $(seq 1 10)
+```

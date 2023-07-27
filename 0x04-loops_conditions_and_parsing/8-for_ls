@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Parsing the input from ls
 files=( * )
 parsed_files=()
 for file_name in ${files[@]}

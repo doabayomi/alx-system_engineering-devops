@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Counting up with 'Hi' on 9th time
 
 a=0
 while [ $a -lt 10 ]

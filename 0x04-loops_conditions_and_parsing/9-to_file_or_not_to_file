@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Checking status for file named 'school'
 
 file="school"
 if [ -e $file ]

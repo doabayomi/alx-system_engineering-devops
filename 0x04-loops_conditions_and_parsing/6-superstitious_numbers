@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Counting up to 21 with clauses on 4, 9 and 17 using case
 
 i=1
 while [ $i -lt 21 ]
