@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+files=( * )
+parsed_files=()
+for file_name in ${files[@]}
+do
+	new_filename="${file_name#*-}"
+	parsed_files+=("$new_filename")
+done
+echo "${parsed_files[@]}"
