@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Prints string 10 times using until loop
 
-a=0
+a=1
 until [ $a -gt 10 ]
 do
 	echo "Best School"
