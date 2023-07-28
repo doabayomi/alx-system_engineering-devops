@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Prints the PID of bash and the command name
+
+PIDs=$( pidof bash )
+for PID in $PIDs
+do
+	echo "$PID bash"
+done
