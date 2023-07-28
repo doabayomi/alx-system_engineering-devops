@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Kills the Buzz Lightyear Hype Train
 
-pkill -f "./4-to_infinity_and_beyond"
+pkill -f -9 "./7-highlander"
