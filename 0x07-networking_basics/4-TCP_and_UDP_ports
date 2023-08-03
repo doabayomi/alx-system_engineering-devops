@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # This prints all listening sockets
-netstat -lpt
+netstat -lp
