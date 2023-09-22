@@ -1,3 +1,4 @@
+# Creating a file in /tmp
 file { 'create-a-file':
   ensure  => 'present',
   path    => '/tmp/school',
