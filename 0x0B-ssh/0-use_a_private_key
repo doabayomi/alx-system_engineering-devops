@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-ssh -i ~/.ssh/school ubuntu@290334-web-01
+# Connecting to a new server
+ssh -i ~/.ssh/school ubuntu@54.209.208.92
