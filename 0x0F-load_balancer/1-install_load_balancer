@@ -1,0 +1,16 @@
+nstalling HAProxy on Ubuntu
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.6
+sudo apt-get install haproxy
+details="\
+frontend def_balancer
+    bind *:80
+    default_backend web-servers
+
+backend web-servers
+    balance roundrobin
+    server 290334-web-01 54.209.208.92:80 check
+    server 290334-web-02 54.209.160.70:80 check
+"
+echo "$details" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
