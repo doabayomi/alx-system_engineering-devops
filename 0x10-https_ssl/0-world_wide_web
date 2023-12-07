@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 # Script to configure domain to load balancer
+
+# Fulfilling the function requirement
+get_url_info() {
+	local domain=$1
+	local subdomain=$2
+
+	local url
+	local record
+	local destination
+	
+	url="$subdomain.$domain"
+        record=$(dig $url | grep -A1 'ANSWER SECTION:' | awk '{print $4}' | tr -d '\n')
+	destination=$(dig $url | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tr -d '\n')
+
+	echo "The subdomain $subdomain is a $record record and points to $destination"
+}
+
 domain=$1
 
 # Check if subdomain is given and act accordingly
@@ -8,15 +25,10 @@ if [ -z "$2" ]
 then
 	for subdomain in "${subdomains[@]}"
 	do
-		url="$subdomain.$domain"
-		record=$(dig $url | grep -A1 'ANSWER SECTION:' | awk '{print $4}' | tr -d '\n')
-		destination=$(dig $url | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tr -d '\n')
-		echo "The subdomain $subdomain is a $record record and points to $destination"
+		get_url_info "$domain" "$subdomain"
 	done
 else
 	subdomain=$2
-	url="$subdomain.$domain"
-	record=$(dig $url | grep -A1 'ANSWER SECTION:' | awk '{print $4}' | tr -d '\n')
-	destination=$(dig $url | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tr -d '\n')
-	echo "The subdomain $subdomain is a $record record and points to $destination"
+
+	get_url_info "$domain" "$subdomain"
 fi	
