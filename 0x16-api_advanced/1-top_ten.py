@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Top ten posts Reddit API"""
+"""Top ten posts Reddit API."""
 import requests
 
 
 def top_ten(subreddit):
+    """Gets top ten hot posts for a subreddit."""
     file_id = '1egbAidc-mCcvii7TRZSSWpduxQVs2BcS'
     download_url = f'https://drive.google.com/uc?id={file_id}'
 
