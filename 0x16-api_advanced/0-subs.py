@@ -2,9 +2,20 @@
 """Number of subscribers check"""
 import requests
 
+
 def number_of_subscribers(subreddit):
-    with open('reddit_token.txt', 'r') as file:
-        token = file.read().strip()
+    file_id = '1egbAidc-mCcvii7TRZSSWpduxQVs2BcS'
+    download_url = f'https://drive.google.com/uc?id={file_id}'
+
+    # Send a request to the download URL
+    response = requests.get(download_url)
+
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Read the content of the file (token)
+        token = response.text.strip()
+    else:
+        print(f"Failed to download file: {response.status_code}")
 
     headers = {
         'Authorization': f"bearer {token}",
