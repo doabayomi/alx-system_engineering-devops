@@ -3,7 +3,7 @@
 import requests
 
 
-def number_of_subscribers(subreddit):
+def top_ten(subreddit):
     file_id = '1egbAidc-mCcvii7TRZSSWpduxQVs2BcS'
     download_url = f'https://drive.google.com/uc?id={file_id}'
 
